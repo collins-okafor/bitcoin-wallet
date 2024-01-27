@@ -4,7 +4,7 @@ const ecc = require('tiny-secp256k1');
 const fs = require('fs');
 
 const ECPair = ECPairFactory(ecc);
-const network = bitcoin.networks.testnet; // Otherwise, bitcoin = mainnet and regnet = local
+const network = bitcoin.networks.testnet;
 
 async function createP2PKHwallet() {
     try {
