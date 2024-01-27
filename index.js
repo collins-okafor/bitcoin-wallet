@@ -9,7 +9,7 @@ const network = bitcoin.networks.testnet; // Otherwise, bitcoin = mainnet and re
 async function createP2PKHwallet() {
     try {
         const keyPair = ECPair.makeRandom({ network: network });
-        const { address } = bitcoin.payments.p2pkh({
+        const { address } = bitcoin.payments.p2wpkh({
           pubkey: keyPair.publicKey,
           network: network,
         });
